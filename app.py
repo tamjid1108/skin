@@ -29,10 +29,12 @@ features = ['normal',
             'dark circles']
 
 # Load the models
-acne_model = torch.load('saved_models/acne-severity/best_6.pt')
+acne_model = torch.load('saved_models/acne-severity/best_6.pt',
+                        map_location=torch.device('cpu') if torch.cuda.is_available() else None)
 acne_model.eval()
 
-skintype_model = torch.load('saved_models/skintype/best_20.pt')
+skintype_model = torch.load('saved_models/skintype/best_20.pt',
+                            map_location=torch.device('cpu') if torch.cuda.is_available() else None)
 skintype_model.eval()
 
 recommender = Recommender(products_path, features)
