@@ -119,17 +119,17 @@ def get_essential_skincare(fv):
 
 
 def generate_visual_meter(severity_level):
-    meter_width = 600
+    meter_width = 90
 
     meter_height = 8
     colors = ['green', 'yellow', 'orange', 'red']
-    progress = 20 + (severity_level)/3 * meter_width
+    progress = 10 + (severity_level)/3 * meter_width
     progress_color = colors[severity_level]
 
     # Define HTML/CSS for the visual meter
     meter_html = f"""
-        <div style="width: {meter_width}px; height: {meter_height}px; border-radius: 10px; background-color: #f1f1f1; position: relative;">
-            <div style="width: {progress}px; height: {meter_height}px; border-radius: 10px; background-color: {progress_color}; position: absolute;"></div>
+        <div style="width: {meter_width}%; height: {meter_height}px; border-radius: 10px; background-color: #f1f1f1; position: relative;">
+            <div style="width: {progress}%; height: {meter_height}px; border-radius: 10px; background-color: {progress_color}; position: absolute;"></div>
         </div>
     """
     return meter_html
