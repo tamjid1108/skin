@@ -138,16 +138,31 @@ def generate_visual_meter(severity_level):
 # Main Streamlit app
 def main():
     st.title("Skin Care Essentials")
-    st.subheader("Based on your personal details")
+    st.header("Based on your personal concerns")
 
-    uploaded_image = st.file_uploader(
-        "Upload an image", type=["jpg", "jpeg", "png"])
+    st.subheader("Upload image or Click one right away")
+    option = st.radio("",
+                      ("Upload an image", "Take a picture"))
+
+    if option == "Upload an image":
+        uploaded_image = st.file_uploader(
+            "Upload an image", type=["jpg", "jpeg", "png"])
+        if uploaded_image is not None:
+            st.image(uploaded_image, caption="Uploaded Image",
+                     use_column_width=True)
+    elif option == "Take a picture":
+        uploaded_image = st.camera_input("Take a picture")
+        # if uploaded_image is not None:
+        # st.image(taken_image, caption="Taken Picture", use_column_width=True)
+
+    # uploaded_image = st.file_uploader(
+    #     "Upload an image", type=["jpg", "jpeg", "png"])
 
     # If an image is uploaded
     if uploaded_image is not None:
-        # Display the uploaded image
+        # # Display the uploaded image
         image = Image.open(uploaded_image)
-        st.image(image, caption='Uploaded Image', use_column_width=True)
+        # st.image(image, caption='Uploaded Image', use_column_width=True)
 
         # Predict the acne severity level
         acne_level = predict_acne_level(image)
