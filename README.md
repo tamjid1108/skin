@@ -62,6 +62,10 @@ streamlit run app.py
 3. Follow the on-screen prompts to upload your image and input any additional skin concerns.
 4. Skincare Sage will provide you with personalized skincare recommendations based on the analysis results.
 
+
+https://github.com/tamjid1108/skin/assets/76261405/e8253992-4661-4ef8-b503-ad986cc53a71
+
+
 ## Contributors
 
 - [Tamjid](https://github.com/tamjid1108)
