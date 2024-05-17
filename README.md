@@ -1,6 +1,6 @@
 # Skincare Sage
 
-Skincare Sage is an intelligent skincare advisor that leverages Deep Learning to predict skin parameters such as acne severity and skin type based on a user's image input. Additionally, users can input other skin concerns, and Skincare Sage will provide personalized recommendations for essential skincare products tailored to their needs.
+Skincare Sage is an intelligent skincare advisor that leverages Deep Learning to predict skin parameters such as acne severity and skin type based on a user's image input. Additionally, users can input other skin concerns, and Skincare Sage will provide personalized recommendations for essential skincare products tailored to their needs. **Find the trained models in the google drive link down the page!**
 
 ## Features
 
@@ -65,6 +65,8 @@ streamlit run app.py
 
 https://github.com/tamjid1108/skin/assets/76261405/e8253992-4661-4ef8-b503-ad986cc53a71
 
+## Saved models drive link incase you are not able to download them from the repo!
+https://drive.google.com/drive/folders/1wANzrk0qFzbbhjEF0MqJhcKkzaSHiWGd?usp=drive_link
 
 ## Contributors
 
